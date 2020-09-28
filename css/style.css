@@ -1,0 +1,74 @@
+/*######## ALL ######## */
+
+/*for navbar*/
+body{
+    padding-top:4.5rem;
+}
+
+
+/*#### tooltip bootstap modify####*/
+.tooltip-inner {
+    background-color: #4f5b62;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #4f5b62 !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: #4f5b62 !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #4f5b62 !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: #4f5b62 !important;
+}
+
+
+
+/*######## ADDFOOD ######## */
+
+.form-addfood {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-addfood .checkbox {
+    font-weight: 400;
+}
+.form-addfood .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-addfood .form-control:focus {
+    z-index: 2;
+}
+.form-addfood input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+
+
+/*############# MENU PAGE #############*/
+.user-img{
+    border-radius: 20px;
+}
+
+table{
+    text-align: center
+}
+
+.tableSpan{
+    text-transform: uppercase
+}
+
+
+
+
+

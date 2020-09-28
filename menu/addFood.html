@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+
+
+
+        <title>Gestione Prodotti</title>
+    </head>
+
+    <body onload="tooltips">
+        <nav class="navbar  fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../menu/menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../menu/addFood.html">Gestione Prodotti</a>
+                    </li>
+
+
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+
+                    <button type="button" class="btn btn-outline-light">  
+                        <img class="user-img" src="../img/mountain.jpg" alt="" width="30" height="auto"> User
+                    </button>  
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-2">
+            <h1 class="h1 text-center ">Gestione Prodotti</h1>
+            <br>
+            <div class="row justify-content-center">
+
+
+
+                <div class="col-md-4">
+                    <form class="form-addfood" id="addFoodForm">
+                        <h1 class="h2 mb-4">Aggiungi o Modifica</h1>
+                        <label  for="inputFoodName" class="sr-only">Food Name</label>
+                        <input type="text" id="inputFoodName" class="form-control" placeholder="Food Name" required autofocus>
+                        <label for="inputFoodPrice" class="sr-only">Price</label>
+                        <input type="text" id="inputFoodPrice" class="form-control" placeholder="Food Price" required>
+                        <label for="inputFoodType" class="sr-only">Food Type</label>
+                        <select class="custom-select my-1 mr-sm-2 " id="inlineFormCustomSelectPref" required>
+                            <option selected>Food Type ..</option>
+                            <option value="1">Primi Piatti</option>
+                            <option value="2">Secondi Piatti</option>
+                            <option value="3">Contorni</option>
+                            <option value="4">Bar</option>
+                        </select>
+
+                        <button class="btn btn-lg btn-dark btn-block" type="submit" >Aggiungi</button>
+                    </form>
+                </div>
+                <div class="col-md-8">
+                    <div class="table-responsive" style="padding: 10px; height: 100%">
+                        <table class="table table-striped ">
+                            <caption>Lista dei prodotti</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Prezzo</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabellaAddFood">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>TESTS</td>
+                                    <td>12</td>
+                                    <td>Primi Piatti</td>
+                                    <td>
+                                        <span data-toggle="modal" data-target="#foodModifyModalForm">
+                                            <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Modifica"><i class="fa fa-pencil"></i></button>
+                                        </span>
+                                        <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Elimina"><i class="fa fa-trash" ></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <p>modifyFood(2,'riso',12,'cucina')</p>
+            <button class='btn btn-dark' data-toggle='tooltip' data-placement='top' title='Modifica' onclick="modifyFood(2,'riso',12,'cucina')"><i class='fa fa-pencil' ></i></button>
+            
+            
+            
+            <!-- Modal -->
+            <!-- foodModifyModalForm -->
+            <div class="modal fade" id="foodModifyModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="">Modifica Alimento</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row justify-content-center">
+                                <form class="form-modifyfood text-center" id="modifyFoodForm">
+                                    <h1 class="h2 mb-4">Modifica</h1>
+                                    <label  for="inputFoodName" class="sr-only">Food Name</label>
+                                    <input type="text" id="inputFoodName" class="form-control" placeholder="Food Name" required autofocus>
+                                    <label for="inputFoodPrice" class="sr-only">Price</label>
+                                    <input type="text" id="inputFoodPrice" class="form-control" placeholder="Food Price" required>
+                                    <label for="inputFoodType" class="sr-only">Food Type</label>
+                                    <select class="custom-select my-1 mr-sm-2 " id="inlineFormCustomSelectPref" required>
+                                        <option selected>Food Type ..</option>
+                                        <option value="1">Primi Piatti</option>
+                                        <option value="2">Secondi Piatti</option>
+                                        <option value="3">Contorni</option>
+                                        <option value="4">Bar</option>
+                                    </select>
+                                    <button class="btn btn-lg btn-dark btn-block mt-2"  type="submit" >Salva</button>
+
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- My JavaScript -->
+        <script src="../js/scripts.js" type="text/javascript"></script>
+        <script src="../js/scriptsMenu.js" type="text/javascript"></script>
+
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!--Bootstrap tooltips-->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();   
+            });
+        </script>
+    </body>
+</html>
