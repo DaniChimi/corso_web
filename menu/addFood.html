@@ -74,42 +74,40 @@
                     </form>
                 </div>
                 <div class="col-md-8">
-                    <div class="table-responsive" style="padding: 10px; height: 100%">
-                        <table class="table table-striped ">
-                            <caption>Lista dei prodotti</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Prezzo</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="tabellaAddFood">
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>TESTS</td>
-                                    <td>12</td>
-                                    <td>Primi Piatti</td>
-                                    <td>
-                                        <span data-toggle="modal" data-target="#foodModifyModalForm">
-                                            <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Modifica"><i class="fa fa-pencil"></i></button>
-                                        </span>
-                                        <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Elimina"><i class="fa fa-trash" ></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table table-striped ">
+                        <caption>Lista dei prodotti</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Prezzo</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabellaAddFood">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>TESTS</td>
+                                <td>12</td>
+                                <td>Primi Piatti</td>
+                                <td>
+                                    <span data-toggle="modal" data-target="#foodModifyModalForm">
+                                        <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Modifica"><i class="fa fa-pencil"></i></button>
+                                    </span>
+                                    <button class="btn btn-dark" data-toggle="tooltip" data-placement="top" title="Elimina"><i class="fa fa-trash" ></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                
+
             </div>
             <p>modifyFood(2,'riso',12,'cucina')</p>
             <button class='btn btn-dark' data-toggle='tooltip' data-placement='top' title='Modifica' onclick="modifyFood(2,'riso',12,'cucina')"><i class='fa fa-pencil' ></i></button>
-            
-            
-            
+
+
+
             <!-- Modal -->
             <!-- foodModifyModalForm -->
             <div class="modal fade" id="foodModifyModalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -45,123 +45,173 @@
         </nav>
 
 
-        <div class="container mt-2">
+        <div class="container-fluid mt-2">
             <h1 class="h1 text-center ">Menu  <button type="button" onclick="" class="btn btn-dark" data-toggle="tooltip" data-placement="right" title="Modifica Menù"><i class="fa fa-pencil" ></i></button></h1>
 
             <br>
 
             <div class="row justify-content-center ">
-                <div class="table-responsive" style="padding: 10px; height:25%;">
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-
+                <table class="table-ext">
+                    <thead>
                         <tr>
                             <th scope="col">Cibo</th>
                             <th scope="col">Prezzo</th>
                             <th scope="col">Quantità</th>
                             <th scope="col">Totale</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                            <th class="tableSpan" scope="col" colspan="5">Primi Piatti</th>
-                        </tr>
+                            <th scope="col"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        </tr>		
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">Casoncelli</th>
-                            <td>&euro;<span id="prezzo1">12.5</span></td>
-                            <td><span id="q1">0</span></td>
-                            <td>&euro; <span id="totale1">0</span></td>
-                            <td>
-                                <button type="button"  onclick="subUno()" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="addUno()" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Pasta</th>
-                            <td>&euro;<span id="">10</span></td>
-                            <td><span id="">0</span></td>
-                            <td>&euro; <span id="">0</span></td>
-                            <td>
-                                <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
+                        <tr>	
+                            <td colspan="5">	
+                                <div class="table-in">		
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="tableSpan" scope="col" colspan="5">Primi Piatti</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Casoncelli</th>
+                                                <td>&euro;<span id="prezzo1">12.5</span></td>
+                                                <td><span id="q1">0</span></td>
+                                                <td>&euro; <span id="totale1">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="subUno()" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="addUno()" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Pasta</th>
+                                                <td>&euro;<span id="">10</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
 
-                    </tbody>
+                                        </tbody>
 
-                    <thead >
-                        <tr>
-                            <th class="tableSpan" scope="col" colspan="5">Secondi Piatti</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Tagliata</th>
-                            <td>&euro;<span id="">12.00</span></td>
-                            <td><span id="">0</span></td>
-                            <td>&euro; <span id="">0</span></td>
-                            <td>
-                                <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <thead >
-                        <tr>
-                            <th class="tableSpan" scope="col" colspan="5">Contorni</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Insalata</th>
-                            <td>&euro; <span id="">3.00</span></td>
-                            <td><span id="">0</span></td>
-                            <td>&euro; <span id="">0</span></td>
-                            <td>
-                                <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Patate Fritte</th>
-                            <td>&euro; <span id="">2.50</span></td>
-                            <td><span id="">0</span></td>
-                            <td>&euro; <span id="">0</span></td>
-                            <td>
-                                <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <thead>
-                        <tr>
-                            <th class="tableSpan" scope="col" colspan="5">Bar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Acqua</th>
-                            <td>&euro; <span id="">2.50</span></td>
-                            <td><span id="">0</span></td>
-                            <td>&euro; <span id="">0</span></td>
-                            <td>
-                                <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
-                                <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
-                            </td>
-                        </tr>
+                                        <thead >
+                                            <tr>
+                                                <th class="tableSpan" scope="col" colspan="5">Secondi Piatti</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Tagliata</th>
+                                                <td>&euro;<span id="">12.00</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead >
+                                            <tr>
+                                                <th class="tableSpan" scope="col" colspan="5">Contorni</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Insalata</th>
+                                                <td>&euro; <span id="">3.00</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Patate Fritte</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th class="tableSpan" scope="col" colspan="5">Bar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Acqua</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Acqua</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Acqua</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Acqua</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Acqua</th>
+                                                <td>&euro; <span id="">2.50</span></td>
+                                                <td><span id="">0</span></td>
+                                                <td>&euro; <span id="">0</span></td>
+                                                <td>
+                                                    <button type="button"  onclick="" class="btn btn-dark"><i class="fa fa-minus"></i></button>
+                                                    <button type="button" onclick="" class="btn btn-dark"><i class="fa fa-plus"></i></button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+
+
+                                    </table>
+
+                                </div>
+                            </td><!--/colspan tabella ext-->	
+                        </tr>	  
                     </tbody>
                     <tfoot>
                         <tr>
                             <td class="tableSpan" colspan="3"><b>TOT</b></td>
                             <td>&euro; <span id="totPrice">0</span></td>
                         </tr>
-                    </tfoot>
-
-                </table>
-                </div>
+                    </tfoot>  
+                </table><!--/table-ext-->
             </div>
             sdfghgsadfg
 

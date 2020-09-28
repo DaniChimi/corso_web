@@ -68,6 +68,19 @@ table{
     text-transform: uppercase
 }
 
+/*##tabella Menu*/
+.table-ext {
+    width:90%;
+}
+
+.table-in{
+   
+    height:400px; 
+    overflow:auto;
+    width:100%;
+}
+
+
 
 
 
